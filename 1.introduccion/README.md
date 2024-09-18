@@ -10,16 +10,18 @@ Es la parte denttro de mi archivo de codigo que no es leido ni ejecutado por el 
 > Los comentarios nos ayudan a entender nuestro codigo, y en ocasiones podemos usarlos para silenciar temporalmente partes del codigo (comentar un codigo)
 
 ### Tipos de Comentario
-1. *Una sola linea*js
-   //comentario de una sola linea
+1. **Una sola linea**
+  ```
+  ///comentario de una sola linea
+  ```
    
-2. *Multiples lineas*js
+1. **Multiples lineas**
    /*
    comentario de multi
    linea
    */
    
-3. *JSDoc*js/**
+2. *JSDoc*js/**
     * este es una linea
     * esta es otra linea
     */
@@ -61,3 +63,45 @@ if(edad >= 18){
 }
 ```
 #### 3. Tablas
+este tipo de mensaje por consola nos muestra la informacion en una tabla.
+solo formateara a los datos de tipo `array` y `objetos`.
+```js
+lenguajes=[
+  {nombre:"javascript",extencion:".js"},
+  {nombre:"python",extencion:".py"},
+  {nombre:"php",extencion:".php"}
+]
+```
+[para los ejemplos has clic aqui](consola.js)
+
+## Naiming
+es la tecnica para nombrar variables, funciones y clases dentro de un lenguaje de programacion.
+las variables tienen reglas muy especificas que debemos seguir a la hora de designar sus nombres.
+### usos incorrectos
+- no se pueden usar espacios 
+>[!WARNING]
+```js
+con espacio=45
+```
+- no usar un numero delante
+>[!WARNING]
+```js
+#incorrecto
+1numero=45
+```
+- Evitar simbolos y `snake_case`
+- >[!WARNING]
+```js
+#Incorrecto
+dame$=45
+#incorrecto
+con_guiones_bajos="no es correcto"
+```
+### Usos correctos
+- Debemos usar nombres que expliquen que aportan esa variable a nuestro codigo.
+- - Usar `camelCase`
+- >[!INFORMATION]
+```js
+#Correcto
+edadAlumno=45
+```

@@ -17,3 +17,13 @@ if(edad >= 18){
     console.warn("heres pulpim")
 }
 console.timeEnd("tiempo de ejecucion")
+
+//mensaje de tipo tabla
+console.table("soy una tabla")
+lenguajes=[
+    {nombre:"javascript",extencion:".js"},
+    {nombre:"python",extencion:".py"},
+    {nombre:"php",extencion:".php"}
+]
+console.log(lenguajes)
+console.table(lenguajes)
