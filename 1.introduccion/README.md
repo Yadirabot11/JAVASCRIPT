@@ -12,19 +12,21 @@ Es la parte denttro de mi archivo de codigo que no es leido ni ejecutado por el 
 ### Tipos de Comentario
 1. **Una sola linea**
   ```
-  ///comentario de una sola linea
+  //comentario de una sola linea
   ```
    
-1. **Multiples lineas**
-   /*
-   comentario de multi
-   linea
-   */
+2. **Multiples lineas**
+  ```
+  /*comentario de multilinea
+  ```
    
-2. *JSDoc*js/**
-    * este es una linea
-    * esta es otra linea
-    */
+1. **JSDoc**
+   ```
+    /** 
+    *este es una linea
+    *esta es otra linea
+    *
+    ```
    
   este tipo de comentario es muy usado para docuemntar el codigo, generalmente usado para la explicacion de funciones y clases en `js`.
   [link del archivo](#comentariosj.s)
