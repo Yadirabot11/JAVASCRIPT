@@ -1,6 +1,12 @@
 # Valores, Tipos y Operadores
 ## Indice
-- [tipos de datos o valores](#valores)
+- [Valores, Tipos y Operadores](#valores-tipos-y-operadores)
+  - [Indice](#indice)
+  - [valores](#valores)
+      - [datos primitivos](#datos-primitivos)
+      - [-numeros(number)](#-numerosnumber)
+      - [numeros especiales](#numeros-especiales)
+      - [aritmetica](#aritmetica)
 ## valores
 Imaginen un mar de bits .
 Una computadora moderna tiene mas de 100 mil millones de bits almacenados en su `memoria de trabajo` o `memoria principal` o `memoria volatil` o `ram`.
@@ -66,6 +72,19 @@ NaN // not a number
 // no es un numero
 // cuando el resultado de una operacion es matematicamente imposible.
 ```
+#### aritmetica
+la principal operacion que se puede hacer con numeros es la aritmetica.
+para esto tenemos los epradores aritmeticos como:
+- suma (+). 
+- resta (-).
+- multiplicacion (*).
+- divicion (/).
+- potencia (**).
+- modulo (%).
+**podemos agrupar operadorescon parentesisi () las operaciones que este entre los parentesis se ejecutara primero**
+consulta el archivo de operadores [aqui](./operadores.js).ve los ejercicios aqui [aqui](./ejercicios.js)
+
+
 
 - tipos (tipos de datos)
 - operadores
