@@ -7,7 +7,10 @@
       - [Numeros(Number)](#numerosnumber)
       - [Arimetica](#arimetica)
       - [cadenas](#cadenas)
+      - [concatenacion](#concatenacion)
       - [plantillas literales](#plantillas-literales)
+      - [operadores unarios](#operadores-unarios)
+      - [valores boleanos](#valores-boleanos)
 ## valores
 Imaginen un mar de bits .
 Una computadora moderna tiene mas de 100 mil millones de bits almacenados en su `memoria de trabajo` o `memoria principal` o `memoria volatil` o `ram`.
@@ -147,7 +150,7 @@ esta en comillas simples , "esta en comillas dobles"`
 ```
 otra manera de hacer los antes mencionados es haciendo uso de la barra invertida `\` tambien conocida como `caracter de escape`.
 hacer uso de este caracter indica que el caracter posterior tendra un significado especial.
-```js
+```
 " de este texto solo esta \"palabra\" estara en comillas "
 **Problema** - deseamos agtreagar un salto de linea en nuestro texto.
 //solucionamos este problema haciendo uso de los acentos graves
@@ -160,11 +163,11 @@ antes de la incorparacion de enmascript 6 en el uso de acentos graves () se util
 y esta es la segunda linea 
 ```
 *problema* - deseo tabular un texto
-js
-`
+
+```js
 este texto no esta tabulado
     este texto si esta tabulado
-`
+```
 
 ahora tabularemos haciendo uso del caracter de escape
 ```js
@@ -181,17 +184,39 @@ las plantillas literales mencionadas anteriormente con el nombre de acento grave
 para hacer uso de esta funcionalidad debemos usar, la siguiente expresion `${}`
 ```js
 //creando plantilla literal - template literals
-``
+```
 //usando dentro de una plantilla literal
-`la suma de 1+1 es $`
+```js
+la suma de 1+1 es $[1+1]
 ```
 >[!TIP]
-> se dise
+> se dise literal por q con el formato que codificamos sera mostrado de esa misma forma en la consola
+#### operadores unarios
+no todos los operadores son simbolos, algunos se escriben como palabras.
+un ejemplo es el operador `typeof`, es operador produce un valor de cadena que indica el tipo del valor que le proporcionamos.
 
-
-
-
-
-
-
-kjoijh
+`operadores binarios` se les conoce por que operan sobre dos valores `2*5`
+`operador unario` por que  solo trabaja con un valor.
+```js
+//para poder ver su funcionalidad o el valor que genera siempre debmos mostrarlo en un console 
+console.log(typeof 5)
+```
+#### valores boleanos
+este tipo de dato primitivo es util cuando tenemos un valor que distinga solo entre dos posibilidades, como `si` y `no` o `encendido` y `apagado`
+para este proposito, javaScript tiene un tipo de dato `booleano`, que tiene solo dos valores `true` y `false`.
+**que fromas de producir valores booleanos tenemos?**
+1. **Usando operadores de comparacion**
+  los operadores de comparacion son los siguientes 
+  -Mayor que(>).
+  -Mayor que(<).
+  -Mayor o igual que(>=).
+  -Mayor o igual que(<=).
+  -Igual a(==).
+  -Extrictamente igual (===).
+  -No es igual a (!=).
+2. **Usando los Operadores Logicos**
+ javaScript soporta tres operadores logicos 
+ - and (y) respresentacion en javaScript `&&`,
+ - or (o) represntacion en javaScript `||`,
+ - not (no) representacion en js `!`,
+**Observacion**este es un operador unario que su funcion es invertir el valor que tiene a su derecha`!true` produce `false`
