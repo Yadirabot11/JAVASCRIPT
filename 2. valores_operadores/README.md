@@ -12,6 +12,7 @@
       - [plantillas literales](#plantillas-literales)
       - [operadores unarios](#operadores-unarios)
       - [valores boleanos](#valores-boleanos)
+      - [Operador Ternario](#Operador-Ternario)
 ## valores
 Imaginen un mar de bits .
 Una computadora moderna tiene mas de 100 mil millones de bits almacenados en su `memoria de trabajo` o `memoria principal` o `memoria volatil` o `ram`.
@@ -167,7 +168,7 @@ y esta es la segunda linea
 
 ```js
 este texto no esta tabulado
-    este texto si esta tabulado
+este texto si esta tabulado
 ```
 
 ahora tabularemos haciendo uso del caracter de escape
@@ -221,3 +222,21 @@ para este proposito, javaScript tiene un tipo de dato `booleano`, que tiene solo
  - or (o) represntacion en javaScript `||`,
  - not (no) representacion en js `!`,
 **Observacion**este es un operador unario que su funcion es invertir el valor que tiene a su derecha`!true` produce `false`
+>[!TIP]
+**AND `&&` `??`** - Si tenemos dos valores verdaderos devolvera el segundo valor verdadero, si tenemos valor falso y uno verdadero devolvera el valor falso.
+
+>[!TIP]
+**OR `||`** - si tenemos dos valores verdaeros devolvera el primer valor verdadero, si tenemos un valor verdadero y uno falso devolvera el valor verdader.
+
+3. **usando el operador relacional**
+este operador compara sus valores y retorna un booleano como resultado.
+lo que evalua este operador es si una propiedad espesifica se encuentra en un objeto.
+evalua si el primer valor que se encuentra asu izquierda existe o forma parte del segundo valor que se encuentra derecha.
+```js
+"a" in ["a","e","i","o","u"]
+```
+#### Operador Ternario
+este operador trabaja con tres valores.
+el primer valor es el que determinara si se muestra el reto de valores.
+eso quiere decir que si el primer valor es verdadero mostrara el segundo valor mientras que si es falso mostrara el tercer valor.
+ ![alt text](image.png)
