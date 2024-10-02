@@ -15,3 +15,12 @@ console.log((1+(2/3)+4)/1)
 console.log((1/2+2/3)/(1/2-2/3))
 console.log(1+(1+((1+2)/(3+4))/(1+(1/2))))
 console.log(1+2+(3/4)+(((1/2)-3)/((1/2)+3)))
+
+
+//crear una variable de numero y mostrar por terminal el numero sumado mas uno
+numero=10
+console.log(++numero)
+// crear una varible que almacene un numero y que por terminal me muestre el numero original y luego el numero sumado mas uno.
+num=12
+console.log(num++)
+console.log(num)
