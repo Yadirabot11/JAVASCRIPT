@@ -235,6 +235,13 @@ evalua si el primer valor que se encuentra asu izquierda existe o forma parte de
 ```js
 "a" in ["a","e","i","o","u"]
 ```
+**TAREA**
+- Averiguar: por que muestra falso.
+
+console.log(["hola"] in ["hola", "mundo"])
+En JavaScript, la expresión "a" in ["a", "e"] da como resultado false porque el operador in se utiliza para verificar si una propiedad existe en un objeto, o un índice en un array, no el valor en sí.
+En este caso, ["a", "e"] es un array, y "a" no es un índice válido de ese array. Los índices válidos para este array son 0 y 1.
+Para verificar si el valor "a" está presente en el array, deberías usar el método includes()*/
 #### Operador Ternario
 este operador trabaja con tres valores.
 el primer valor es el que determinara si se muestra el reto de valores.

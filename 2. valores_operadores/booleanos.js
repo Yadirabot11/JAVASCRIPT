@@ -10,7 +10,11 @@ console.log(5 != 7) //true
 //NaN == NaN
 
 console.log(NaN==NaN) //false
+
 //averiguar la forma que se realizan las comparaciones con cadena de texto.
+//Igualdad (==): Compara dos cadenas y verifica si son iguales (sin considerar el tipo).
+console.log("hola" == "hola"); // true
+
 //todas las letras mayusculas seran menores a las minusculas.
 //Z>a
 //por que javaScript compara los codigos unicode de cada caracter.
