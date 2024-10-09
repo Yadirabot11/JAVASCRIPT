@@ -12,6 +12,13 @@ console.log(5 != 7) //true
 console.log(NaN==NaN) //false
 
 //averiguar la forma que se realizan las comparaciones con cadena de texto.
+//1. Igualdad: Para comparar si dos cadenas son iguales, se pueden usar los operadores == o ===.
+//Uso del operador == (igualdad no estricta):
+let cadena1 = "hola";
+let cadena2 = "hola";
+console.log(cadena1 == cadena2); // true
+
+
 //Igualdad (==): Compara dos cadenas y verifica si son iguales (sin considerar el tipo).
 console.log("hola" == "hola"); // true
 
