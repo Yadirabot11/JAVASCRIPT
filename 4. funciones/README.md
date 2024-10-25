@@ -10,6 +10,8 @@
     - [Funcion como declaracion](#funcion-como-declaracion)
     - [Funcion de flecha (arrow function)](#funcion-de-flecha-arrow-function)
     - [Diferencias](#diferencias)
+    - [binding](#binding)
+  - [la pila de llamadas (call stack)](#la-pila-de-llamadas-call-stack)
 # FUNCIONES
 Las funciones en javascript son `bloques de codigo ejecutable`, a los que podemos pasar parametros y operar con ellos.
 Nos sirve para modular (modularizar) nuestro programa y estructurarlos en bloques que `realicen una tarea concreta`, de esta manera nuestro codigo es mas legible y mantenible. 
@@ -136,6 +138,39 @@ let registroUsuario=(nombre,apellido)=>{
 console.log(registroUsuario("edwin","ramos"))
 ```
 ### Diferencias
+Las diferencias que tenemos al momento de crear una funcion declarativa, funcion como valor y flecha es el binding.
+### binding
+Es una tecnica que guarda las funciones y varibles (enlaces) sube al principio la declaracion no el valor a la cabecera del archivo javaScript.
+```js
+despedida()
+function saludo(){
+    return "hola primo"
+}
+function despedida(){
+    return "adios"
+}
+```
+```js
+saludo()
+despedida()
+```
+## la pila de llamadas (call stack)
+Es una tecnica que se usa para controlar de manera correcta la ejecucion de una funcion.
 
+**TAREA AVERIGUAR SOBRE LIFO**
+LIFO, que significa "Last In, First Out" (último en entrar, primero en salir), es un método de contabilidad de inventarios y gestión de existencias. En este sistema, los últimos artículos que se añaden al inventario son los primeros en ser vendidos o utilizados. Esto puede ser especialmente útil en industrias donde los productos pueden tener una fecha de caducidad o en situaciones donde los costos de adquisición están en constante cambio.
 
+**Ventajas de LIFO:**
+1. Reducción de impuestos: En periodos de inflación, LIFO puede resultar en costos más altos para el inventario vendido, lo que puede reducir las ganancias imponibles.
+1. Valoración más realista: Puede reflejar mejor el costo actual de los bienes vendidos en entornos inflacionarios.
 
+**Desventajas de LIFO:**
+1. Complejidad contable: Llevar un seguimiento de los inventarios puede ser más complicado que con otros métodos, como FIFO (First In, First Out).
+2. Valoración de inventarios: El inventario que queda en el balance puede estar valorado a costos más antiguos, lo que puede no reflejar el valor de mercado.
+
+**Ejemplo:**
+Imagina que una tienda de electrónica compra tres lotes de un mismo producto a diferentes precios. Si el último lote es el más caro, bajo el método LIFO, ese lote se venderá primero, lo que afectará las ganancias reportadas y el valor del inventario restante.
+
+```js
+//programa que haga una ensalada
+```
