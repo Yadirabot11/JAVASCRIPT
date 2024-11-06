@@ -33,31 +33,47 @@ function despedida(){
 //function valorContador
 //return contador
 
-function contador(){
-    let contador=0
-    function incre(){
-        return contador++
-    }
-    function decre(){
-        return contador--
-    }
-    function valueCount(){
-        console.log(contador)
-    }
-    return {
-        valueCount,
-        incre,
-        decre
-    }
-}
-let count1=contador()
-for(let i=0;i<5;i++){
-    count1.incre()
-}
-count1.valueCount()
+//function contador(){
+//    let contador=0
+//    function incre(){
+//        return contador++
+//    }
+//    function decre(){
+//       return contador--
+//    }
+//    function valueCount(){
+//        console.log(contador)
+//    }
+//    return {
+//        valueCount,
+//        incre,
+//        decre
+ //   }
+//}
+//let count1=contador()
+//for(let i=0;i<5;i++){
+//    count1.incre()
+//}
+//count1.valueCount()
 
-let count2=contador()
-for(let i=0;i<5;i++){
-    count2.decre()
+//let count2=contador()
+//for(let i=0;i<5;i++){
+//    count2.decre()
+//}
+//count2.valueCount
+
+let contador=1
+function contador(){
+    this.contador=0 
+    this.incre=function(){
+        this.contador++
+    }
+    this.decre=function(){
+        this.contador--
+    }
 }
-count2.valueCount
+//realizamos la instancia 
+let count1=new contador()
+console.log(count1.contador)
+count1.incre()
+console.log(count1.contador)
