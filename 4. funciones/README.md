@@ -1,6 +1,5 @@
-# FUNCIONES
+"# FUNCIONES
 - [FUNCIONES](#funciones)
-- [FUNCIONES](#funciones-1)
   - [Estructura de una funcion (como se crea una funcion)](#estructura-de-una-funcion-como-se-crea-una-funcion)
   - [Tipos de Argumentos y Parametros](#tipos-de-argumentos-y-parametros)
   - [Argumentos y parametros posicionales](#argumentos-y-parametros-posicionales)
@@ -252,3 +251,60 @@ for(let i=0;i<5;i++){
 >El problema principal de este tipo de funcion, es que cuando creamos un nuevo objeto a partir de la funcion tipo clase, reservara espacio en memoria para toda la clase y su valor creados eso quiere decir variable y funciones, cada vez que llamamos a una funcion esta se replica en memoria.
 
 ### prototype (tarea- averiguar y sus ejemplos)
+"Prototype" es un término que puede tener varios significados dependiendo del contexto en que se utilice. Generalmente, se refiere a un modelo o versión preliminar de algo que sirve como base para desarrollar versiones futuras. En español, puede traducirse como "prototipo". Aquí te ofrezco una explicación y ejemplos en distintos contextos.
+
+1. En desarrollo de productos y diseño industrial:
+Definición: Un prototipo es una primera versión funcional o no final de un producto que se crea para probar conceptos, validar ideas o identificar posibles mejoras antes de la producción en serie.
+
+Ejemplo:
+
+Prototipo de un teléfono móvil: Antes de fabricar un teléfono en masa, los diseñadores y desarrolladores crean un prototipo para probar la ergonomía, la funcionalidad del software y las características del hardware.
+2. En programación y desarrollo de software:
+Definición: En el ámbito de la programación orientada a objetos, el "prototipo" se refiere a un objeto del cual otros objetos pueden heredar propiedades y métodos. Es una forma de crear nuevos objetos basándose en un objeto existente.
+
+Ejemplo:
+
+Prototype en JavaScript: JavaScript utiliza un modelo basado en prototipos, lo que significa que los objetos pueden heredar directamente de otros objetos. Por ejemplo, un objeto persona puede ser el prototipo de un objeto empleado, permitiendo que empleado herede características de persona.
+
+"Prototype" es un término que puede tener varios significados dependiendo del contexto en que se utilice. Generalmente, se refiere a un modelo o versión preliminar de algo que sirve como base para desarrollar versiones futuras. En español, puede traducirse como "prototipo". Aquí te ofrezco una explicación y ejemplos en distintos contextos.
+
+1. En desarrollo de productos y diseño industrial:
+Definición: Un prototipo es una primera versión funcional o no final de un producto que se crea para probar conceptos, validar ideas o identificar posibles mejoras antes de la producción en serie.
+
+Ejemplo:
+
+Prototipo de un teléfono móvil: Antes de fabricar un teléfono en masa, los diseñadores y desarrolladores crean un prototipo para probar la ergonomía, la funcionalidad del software y las características del hardware.
+2. En programación y desarrollo de software:
+Definición: En el ámbito de la programación orientada a objetos, el "prototipo" se refiere a un objeto del cual otros objetos pueden heredar propiedades y métodos. Es una forma de crear nuevos objetos basándose en un objeto existente.
+
+Ejemplo:
+
+Prototype en JavaScript: JavaScript utiliza un modelo basado en prototipos, lo que significa que los objetos pueden heredar directamente de otros objetos. Por ejemplo, un objeto persona puede ser el prototipo de un objeto empleado, permitiendo que empleado herede características de persona.
+```js
+javascript
+Copiar código
+let persona = {
+  nombre: "Juan",
+  saludar: function() {
+    console.log("Hola, " + this.nombre);
+  }
+};
+```
+let empleado = Object.create(persona);  // empleado hereda de persona
+empleado.nombre = "Carlos";
+empleado.saludar();  // Salida: Hola, Carlos
+3. En ciencias y psicología:
+Definición: En psicología cognitiva, un prototipo se refiere a la representación mental de la categoría de un objeto o concepto, el cual posee las características más comunes o representativas de esa categoría.
+
+Ejemplo:
+
+Prototipo de un ave: Si te pido que imagines un "ave", lo más probable es que pienses en un pájaro común, como un gorrión o una paloma. Estos serían ejemplos de prototipos de la categoría "ave", porque tienen las características más típicas (plumas, pico, alas, etc.).
+4. En metodología de investigación y prueba de ideas:
+Definición: Un prototipo también puede ser una prueba preliminar de una idea, plan o solución para explorar su viabilidad antes de comprometerse a un desarrollo más amplio.
+
+Ejemplo:
+
+Prototipo de un servicio: En lugar de lanzar un servicio completo, una empresa podría ofrecer un "prototipo" del servicio a un grupo limitado de usuarios para recoger comentarios y ajustar detalles antes de un lanzamiento masivo.
+
+Resumen:
+En cualquier contexto, el prototipo sirve como una versión preliminar o modelo inicial que se utiliza para probar, validar, y mejorar una idea o producto. Los ejemplos pueden variar dependiendo del área de aplicación, pero el principio es el mismo: crear una versión inicial para evaluar la viabilidad y eficiencia antes de avanzar a etapas posteriores de desarrollo.
