@@ -308,3 +308,119 @@ Prototipo de un servicio: En lugar de lanzar un servicio completo, una empresa p
 
 Resumen:
 En cualquier contexto, el prototipo sirve como una versión preliminar o modelo inicial que se utiliza para probar, validar, y mejorar una idea o producto. Los ejemplos pueden variar dependiendo del área de aplicación, pero el principio es el mismo: crear una versión inicial para evaluar la viabilidad y eficiencia antes de avanzar a etapas posteriores de desarrollo.
+
+### prototype 
+para crear un prototype tendremos que crear primero nuestra funcion principal que es la encargada de almacenar nuestras variables locales con las que trabajaremos.
+luego acederemos al prototype de nuestra funcion creada y el valor o varible de tipo objeto le indicaremos las funciones que tendra nuestra funcion principal que interactuara con njuestra variables locales.
+```js
+function contador(nombre){
+    this.count=0
+    this.nombre=nombre
+}
+contador.prototype={
+    incremento:function(){
+        this.count++
+    },
+    decremento:function(){
+        this.count--
+    },
+    mostraDatos:function(){
+        return `${this.count}, ${this.nombre}`
+    }
+}
+```
+> [!NOTE]
+> es una convencion  usar como nombre de nuestra funcion principal, 1. que debe ser singular, 2. que use pascal case
+
+## RECURCION EN FUNCIONES (Tarea)
+La recursión es una técnica en programación en la que una función se llama a sí misma para resolver un problema. Es especialmente útil para resolver problemas que pueden ser divididos en subproblemas más pequeños que tienen la misma estructura que el problema original. En otras palabras, un problema recursivo puede descomponerse en una versión más sencilla del mismo problema.
+
+- ¿Cómo funciona la recursión? Una función recursiva tiene dos componentes clave:
+
+1. Caso base: Es la condición que detiene la recursión. Sin un caso base, la función seguiría llamándose a sí misma infinitamente, lo que resultaría en un desbordamiento de pila (stack overflow).
+2. Llamada recursiva: Es la llamada a la propia función dentro de sí misma, con un problema más pequeño o simplificado.
+
+Ejemplo básico: Factorial de un número
+El factorial de un número n, denotado como n!, se define como el producto de todos los números enteros desde 1 hasta n. Matemáticamente:
+- n! = n * (n-1)! con 0! = 1 como caso base.
+```JS
+def factorial(n):
+    # Caso base: si n es 0 o 1, el factorial es 1
+    if n == 0 or n == 1:
+        return 1
+    else:
+        # Llamada recursiva
+        return n * factorial(n - 1)
+    
+# Ejemplo de uso
+print(factorial(5))  # Output: 120
+```
+## Propósito de la recursión
+
+La recursión se utiliza para problemas donde el tamaño del problema se reduce en cada llamada recursiva, como:
+
+- Recorrido de estructuras de datos como árboles y grafos.
+- Algoritmos de búsqueda y ordenación, como el algoritmo de ordenación rápido (quicksort) o la búsqueda binaria.
+- Problemas combinatorios como las permutaciones, combinaciones, o las torres de Hanoi.
+
+La recursión es una herramienta poderosa y elegante en la programación, especialmente cuando el problema se puede dividir en subproblemas de igual naturaleza. Sin embargo, es importante usarla con cuidado y tener en cuenta los límites de profundidad y eficiencia para evitar problemas como el desbordamiento de pila o la ineficiencia en tiempo de ejecución.
+## FUNCIONES CALLBACKS (Tarea)
+Las funciones callback son funciones que se pasan como argumentos a otras funciones y que se ejecutan en algún momento posterior, cuando se cumpla alguna condición o evento. Es un patrón común en muchos lenguajes de programación, especialmente en lenguajes que manejan de forma asíncrona o de eventos, como JavaScript.
+
+- ¿Qué es una función callback?
+
+Una función callback es simplemente una función que se pasa como argumento a otra función y que luego es ejecutada dentro de esa función externa cuando se cumple una condición específica.
+
+La principal utilidad de las callbacks es que permiten la ejecución de código de forma diferida, es decir, ejecutar una función después de que una operación haya terminado, sin bloquear el flujo de ejecución del programa.
+
+## Ejemplo básico en JavaScript
+Un ejemplo típico de callback es el uso de funciones de orden superior, como en este caso, donde una función acepta una callback que se ejecuta al final de una operación:
+```JS
+function saludar(nombre, callback) {
+    console.log("Hola, " + nombre);
+    callback(); // Llamamos a la función callback
+}
+
+function despedir() {
+    console.log("Adiós!");
+}
+
+saludar("Carlos", despedir);  // Output: "Hola, Carlos" seguido de "Adiós!"
+```
+En este ejemplo, saludar es una función que acepta dos parámetros: un nombre y una función callback que se ejecuta después de mostrar el saludo.
+
+Las callbacks son una herramienta poderosa para manejar operaciones asíncronas y eventos diferidos, pero su uso excesivo o incorrecto puede hacer que el código sea más difícil de entender. Es importante utilizarlas correctamente y considerar alternativas como las promesas o async/await en lenguajes que las soportan, para evitar los problemas comunes asociados con el uso de callbacks.
+
+# CLASES
+las clases en javascript llegan enla version `ECMAScript 6`, javascript no tenia al igual que otros lenguajes de programacion orientados a objetos la `clase` ya que js se enfoca en la `programacion funcional`, sin embargo con la llegada es `ES6`, javascript adopta ser un lenguaje de programacion multiparadigma, entre ellos la `programacion orientada a objetos` con la llegada de las `clases`
+## estuctura de una clase en javaScrip.
+Una clase esta separada en tres grandes secciones.
+1. el nombre de la clase que debera ser en singular y en pascalCase.
+2. debera tener atrubutos (valores, variables) estos deberan ser sustantivos y estar escritos en camelCase.
+3. deberan tener metodos (acciones, funciones) estos deberan ser verbos u estar escritos en camelCase.
+```js
+class Computadora{
+    //atributos
+    constructor(marca){
+        this.marca=""
+        this.color=""
+        this.tipoCase="tower"
+    }
+    //metodos
+    encender(){
+        return"estoy encendiendo"
+    }
+    apagar(){
+        return"estoy cerrando sesion y guardando informacion antes del apagado"
+    }
+    escribir(){
+        return"escribiendo mi informe"
+    }
+    jugar(){
+        return"jugando "
+    }
+}
+//instanciar
+let miPc=new computador("gigabyte")
+miPc.encender()
+```
