@@ -14,6 +14,13 @@
   - [CLOSURE o Funciones de cierre  (funciones que retorna)](#closure-o-funciones-de-cierre--funciones-que-retorna)
     - [CLOSURE tipo clase](#closure-tipo-clase)
     - [prototype (tarea- averiguar y sus ejemplos)](#prototype-tarea--averiguar-y-sus-ejemplos)
+    - [prototype](#prototype)
+  - [RECURCION EN FUNCIONES (Tarea)](#recurcion-en-funciones-tarea)
+  - [Propósito de la recursión](#propósito-de-la-recursión)
+  - [FUNCIONES CALLBACKS (Tarea)](#funciones-callbacks-tarea)
+  - [Ejemplo básico en JavaScript](#ejemplo-básico-en-javascript)
+- [CLASES](#clases)
+  - [estuctura de una clase en javaScrip.](#estuctura-de-una-clase-en-javascrip)
 # FUNCIONES
 Las funciones en javascript son `bloques de codigo ejecutable`, a los que podemos pasar parametros y operar con ellos.
 Nos sirve para modular (modularizar) nuestro programa y estructurarlos en bloques que `realicen una tarea concreta`, de esta manera nuestro codigo es mas legible y mantenible. 
@@ -345,15 +352,21 @@ El factorial de un número n, denotado como n!, se define como el producto de to
 - n! = n * (n-1)! con 0! = 1 como caso base.
 ```JS
 def factorial(n):
-    # Caso base: si n es 0 o 1, el factorial es 1
+    Caso base: si n es 0 o 1, el factorial es 1
     if n == 0 or n == 1:
         return 1
     else:
         # Llamada recursiva
-        return n * factorial(n - 1)
-    
-# Ejemplo de uso
-print(factorial(5))  # Output: 120
+        return n * factorial(n - 1)    
+console.log(factorial(5))
+```
+```js
+def factorial(n){
+   if (n == 0){
+    return 1
+   }
+   return n*factorial(n-1)
+}
 ```
 ## Propósito de la recursión
 
@@ -386,6 +399,26 @@ function despedir() {
 }
 
 saludar("Carlos", despedir);  // Output: "Hola, Carlos" seguido de "Adiós!"
+```
+
+
+```js
+// sin callback
+funcion uno(){
+    return " soy uno "
+}
+funcion dos(){
+    return "soy dos "
+}
+console.log(uno())
+console.log(dos())
+//con callbaks
+funcion uno(callback){
+    console.log("soy uno")
+    callback()
+}
+uno(()=>{console.log("soy dos")})
+uno(function(){consle.log("soy dos")})
 ```
 En este ejemplo, saludar es una función que acepta dos parámetros: un nombre y una función callback que se ejecuta después de mostrar el saludo.
 
