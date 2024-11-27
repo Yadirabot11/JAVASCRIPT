@@ -72,3 +72,78 @@ console.log("El número mayor es:", encontrarMayor(listaDeNumeros));
 //     }
 
 // contadorA(letras)
+
+
+//let texto="hola mundo"
+//["hola","mundo"]
+//let listaTexto=texto.split("")
+//console.log(listaTexto)
+//let lista=["hola","como","estas"]
+//"hola como estas"
+//let nuevoTexto=lista.join(", ")
+//console.log(nuevoTexto)
+//tengo la siguiente url
+//www.gatitas.com/?q=marina+gold
+//crear un programa que me capture solo la query "marina gold"
+//let url="www.gatitas.com/?q=marina+gold"
+//let cortarUrl=url.split("=")
+//let obtenerPrimerElemento=cortarUrl[1]
+//let divididoTextoEnDos=obtenerPrimerElemento.split("+")
+//let juntarTexto=divididoTextoEnDos.join("")
+//let listaUrl=url.split("=")[1].split("+").join("")
+//console.log(juntarTexto)
+
+//let datosJoryObjeto={
+//  nombre:"jory",
+//  apellido:"rodriguez",
+//  edad:20,
+//  sexo:"m",
+//  ganado:["el primo","los chamos","las enfermeras","mineros"],
+//  direccion:{
+//    tipoCalle:"pasaje",
+//    nombreCalle:"querobamba",
+//    numeroVivienda:222,
+//    numeroCuarto:5
+//  }
+//}
+//console.log(datosJoryObjeto.ganado)
+//console.log(datosJoryObjeto["sexo"])
+//console.log(datosJoryObjeto["numeroVivienda"])
+//console.log(datosJoryObjeto.ganado[3])
+
+
+//ejercicio 
+//crear una funcion que genere un objeto de caracteristicas tecnicas de una computadora el objeto debera tener como minimo los siguientes valores 
+//marca, modelo, procesador, ram, disco y tarjeta de video
+//const computadora=(marca, modelo, procesador, ram, disco)=>{
+//    return {
+//        marca: marca,
+//        modelo: modelo,
+//        procesador: procesador,
+//        ram: ram,
+//        disco: disco,
+//    }
+//}
+//let objetoPc=computadora("los marcas", "maranguita", "xeon","100gbs")
+//console.log(objetoPc)
+//en este caso la clave marca existe en mi objeto por lo tanto su valor sera actualizado por intel
+//objetoPc["marca"]="intel"
+//console.log(objetoPc)
+//en este caso la clave tarjeta no existe en mi objeto por lo tanto se creara un nuevo elemento con la clave tarjeta y su valor envia 
+//objetoPc["tarjeta"]="envidia"
+//console.log(objetoPc)
+
+//averiguar como eliminar un elemnto de un objeto
+const computadora = {
+    marca: "Dell",
+    modelo: "XPS 15",
+    procesador: "Intel Core i7",
+    ram: "16GB",
+    disco: "512GB SSD",
+    tarjetaVideo: "NVIDIA GTX 1650"
+};
+
+// Eliminar la propiedad "tarjetaVideo"
+delete computadora.tarjetaVideo;
+
+console.log(computadora);

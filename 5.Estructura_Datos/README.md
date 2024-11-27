@@ -274,6 +274,26 @@ num.toFixed(2); // "123.46"
 ```
 
 ## Objetos
+los objetos son tipos de datos estructurados similares a las listas, para poder acceder a un elemnto de la lista javascript les asignaba indices, en este caso los objetos como unica diferencia de la lista nosotros podremos asignar el nombre del elemento al cual deseamos acceder a esto se le conoce como `clave:valor`.
+cada clave valor es un elemento de un objeto si deseamos crear mas elementos tendremos que separarlos por comas.
 ### creacion
+para crear un objeto debemos encerrar los elementos en llaves `{}` cada elemto estara coformado por su `clave:valor`.
+```js
+let datosJory=["jory","rodriguez",20,"m"]
+let datosJoryObjeto={
+  nombre:"jory",
+  apellido:"rodriguez",
+  edad:20,
+  sexo:"m"
+  ganado:["el primo","los chamos","las enfermeras","mineros"]
+  direccion:{
+    tipoCalle:"pasaje",
+    nombreCalle:"querobamba",
+    numeroVivienda:222,
+    numeroCuarto:5
+  },
+  accion:()=>{console.log("hola soy jory")}
+}
+```
 ## acceder de un elemento del objeto
 ### metodos
